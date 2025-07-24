@@ -24,7 +24,9 @@ def analyze_json(file_path: str, model: str = "gpt-4o") -> str:
         data_str = f.read()
 
     prompt = (
-        f"""YOUR PROMPT
+        f"""Based on the following example, summarise and classify the malware behaviour. 
+Example: The malware disables antivirus and downloads payloads from 193.233.132.188. → Windows Infostealer 
+Now analyze: AtomicStealer uses AppleScript to prompt for passwords, copies Keychain files, and sends data to a C2 server at 193.233.132.188.
 
         Here is the JSON to analyze:
         {data_str}
