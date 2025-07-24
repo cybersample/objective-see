@@ -42,7 +42,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Preprocess fetched data
-      run: python preprocess_data.py
+      run: python truncate_json_last_filtered_long.py
 
   analyze_data:
     runs-on: ubuntu-latest
