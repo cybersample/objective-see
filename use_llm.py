@@ -24,9 +24,10 @@ def analyze_json(file_path: str, model: str = "gpt-4o") -> str:
         data_str = f.read()
 
     prompt = (
-        f"""Based on the following example, summarise and classify the malware behaviour. 
-Example: The malware disables antivirus and downloads payloads from 193.233.132.188. → Windows Infostealer 
-Now analyze: AtomicStealer uses AppleScript to prompt for passwords, copies Keychain files, and sends data to a C2 server at 193.233.132.188.
+        f"""I want to analysis the log file to check for any suspicious behaviour
+Once the patterns and suspicious activities found in the logs 
+Check if there are any existing malware which exibits and matches it and give me the name, if found. 
+Summarise the found patterns and malware details. 
 
         Here is the JSON to analyze:
         {data_str}
