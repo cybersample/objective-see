@@ -27,7 +27,7 @@ def analyze_json(file_path: str, model: str = "gpt-4o") -> str:
         f"""I want to analysis the log file to check for any suspicious behaviour
 Once the patterns and suspicious activities found in the logs 
 Check if there are any existing malware which exibits and matches it and give me the name, if found. 
-Summarise the found patterns and malware details. 
+Summarise the found patterns and malware details . 
 
         Here is the JSON to analyze:
         {data_str}
